@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QPainter>
 #include <QRectF>
+#include  <QGraphicsTextItem>
 
 class myGraphicsscene : public QGraphicsScene
 {
@@ -15,6 +16,8 @@ public:
 protected:
     void drawBackground(QPainter *painter,
                                          const QRectF &);
+private:
+    QGraphicsTextItem* mTextItem;
 };
 
 #endif // MYGRAPHICSSCENE_H

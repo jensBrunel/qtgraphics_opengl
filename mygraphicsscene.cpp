@@ -17,8 +17,12 @@
 
 myGraphicsscene::myGraphicsscene(QWidget* parent)
     : QGraphicsScene(parent)
+    , mTextItem(0)
 {
-
+    mTextItem = new QGraphicsTextItem("Sample Text");
+    mTextItem->setTextInteractionFlags(Qt::TextEditorInteraction);
+    addItem(mTextItem);
+    mTextItem->setPos(sceneRect().width()/2, sceneRect().height()/2);
 }
 
 myGraphicsscene::~myGraphicsscene()

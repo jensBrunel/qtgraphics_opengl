@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->myGraphicsview->setScene(m_graphicsScene);
 
     ui->myGraphicsview->scene()->setSceneRect(ui->myGraphicsview->rect());
+    ui->lineEdit->setStyleSheet("background:transparent;");
 }
 
 MainWindow::~MainWindow()
